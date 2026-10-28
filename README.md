@@ -18,6 +18,10 @@ I build AI-powered mobile solutions, with a focus on computer vision for agricul
 - **Sign Language Translator** *(in progress)* — Camera-based hand-gesture recognition with text and speech output, working toward Pakistan Sign Language translation.
 - **[ella-recipe-app](https://github.com/IjazAIResearch/ella-recipe-app)** — Flutter app for food-waste reduction: localized recipes, expiry alerts and community sharing.
 
+## 📱 App Interface (SmartAgri-AI)
+
+<img src="https://raw.githubusercontent.com/IjazAIResearch/SmartAgri-AI/main/screenshots/k.jpeg" width="250" alt="SmartAgri-AI dashboard" /> <img src="https://raw.githubusercontent.com/IjazAIResearch/SmartAgri-AI/main/screenshots/WhatsApp%20Image%202026-08-19%20at%2010..jpeg" width="250" alt="AI Crop Health Scanner" /> <img src="https://raw.githubusercontent.com/IjazAIResearch/SmartAgri-AI/main/screenshots/WhatsApp%20Image%202026-08-19%20at%2010.02.54%20AM.jpeg" width="250" alt="Agri AI Assistant" />
+
 ## 🛠️ Tech
 
 Python · TensorFlow/Keras · Flutter · Dart · Java · JavaScript · TFLite · Android
