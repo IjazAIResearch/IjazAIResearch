@@ -1,0 +1,19 @@
+# Python pipeline for the PSL translator app.
+# Install with: pip install -r requirements.txt
+#
+# MAIN PSL ALPHABET PATH (37 letters, image classification):
+#   prepare_dataset.py needs NOTHING (standard library only).
+#   train_psl.py needs: tensorflow, scikit-learn, pandas, numpy, pillow
+#
+# LEGACY DEMO PATH (landmark classifier, kept as a fallback reference):
+#   collect_landmarks.py needs: opencv-python, mediapipe
+#   train_classifier.py needs: scikit-learn, pandas, numpy
+#   export_tflite.py needs: tensorflow, pandas, numpy
+#   generate_synthetic_demo.py needs NOTHING (standard library only).
+opencv-python
+mediapipe
+scikit-learn
+pandas
+numpy
+tensorflow
+pillow
