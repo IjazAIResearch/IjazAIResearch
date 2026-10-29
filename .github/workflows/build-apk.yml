@@ -28,10 +28,10 @@ jobs:
           curl -L -o $RUNNER_TEMP/psl.zip "https://muse.ai/files/1313644108504506/1405035981677208/ml8teivgl23iblndja7kxf63/PSL-App-Flutter.zip"
           mkdir -p $RUNNER_TEMP/psl && unzip -q $RUNNER_TEMP/psl.zip -d $RUNNER_TEMP/psl
           cp $RUNNER_TEMP/psl/assets/model.tflite sign-language-app/flutter_app/assets/model.tflite
-          cp $RUNNER_TEMP/psl/android/gradle/wrapper/gradle-wrapper.jar sign-language-app/flutter_app/android/gradle/wrapper/gradle-wrapper.jar
-          for d in hdpi mdpi xhdpi xxhdpi xxxhdpi; do cp $RUNNER_TEMP/psl/android/app/src/main/res/mipmap-$d/ic_launcher.png sign-language-app/flutter_app/android/app/src/main/res/mipmap-$d/ic_launcher.png; done
+          cp $RUNNER_TEMP/psl/android/gradle/wrapper/gradle-wrapper.jar sign-language-app/flutter_app/android/gradle-wrapper.jar
+          for d in hdpi mdpi xhdpi xxhdpi xxxhdpi; do mkdir -p sign-language-app/flutter_app/android/app/src/main/res/mipmap-$d && cp $RUNNER_TEMP/psl/android/app/src/main/res/mipmap-$d/ic_launcher.png sign-language-app/flutter_app/android/app/src/main/res/mipmap-$d/ic_launcher.png; done
           rm -f sign-language-app/flutter_app/android/local.properties
-          ls -la sign-language-app/flutter_app/assets/model.tflite sign-language-app/flutter_app/android/gradle/wrapper/gradle-wrapper.jar
+          ls -la sign-language-app/flutter_app/assets/model.tflite sign-language-app/flutter_app/android/gradle-wrapper.jar
 
       - name: Install dependencies
         working-directory: sign-language-app/flutter_app
