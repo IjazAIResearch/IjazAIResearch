@@ -144,7 +144,7 @@ class PslClassifierService {
       return img.Image.fromBytes(
         width: image.width,
         height: image.height,
-        bytes: plane.bytes,
+        bytes: plane.bytes.buffer,
         format: img.Format.uint8,
         numChannels: 4,
         order: img.ChannelOrder.bgra,
