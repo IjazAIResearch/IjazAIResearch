@@ -1,0 +1,33 @@
+name: psl_translator
+description: "Pakistan Sign Language translator — full 37-letter alphabet recognition with an on-device TFLite model, fingerspelling, and Learn mode. Falls back to a labelled demo when no model is present."
+publish_to: "none"
+version: 0.2.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Camera preview + frame stream for the classifier.
+  camera: ^0.11.0
+  # Text-to-speech for letters and fingerspelled words.
+  flutter_tts: ^4.0.0
+  # On-device inference for the trained PSL alphabet model.
+  tflite_flutter: ^0.11.0
+  # Camera-frame conversion (YUV/BGRA) + centre-crop/resize to 224x224.
+  image: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  # Trained model is present (trained 2026-10-28, see README.md):
+  # model.tflite + labels.txt live in flutter_app/assets/.
+  assets:
+    - assets/model.tflite
+    - assets/labels.txt
